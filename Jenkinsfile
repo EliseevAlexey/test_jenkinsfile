@@ -16,7 +16,7 @@ pipeline {
         stage ("Create docker image") {
             steps {
                 echo "====== start build image ====="
-                sh 'docker build .'
+                sh 'docker build -t toolbox:latest .'
             }
         }
     }
