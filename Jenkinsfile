@@ -17,5 +17,10 @@ pipeline {
               sh 'hostname'
             }
         }
+        stage ("Second step") {
+            steps {
+              sh 'uptime'
+            }
+        }
     }
 }
