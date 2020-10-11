@@ -12,14 +12,10 @@ pipeline {
     }
     
     stages {
-        stage ("First step") {
+        stage ("Create docker image") {
             steps {
-              sh 'hostname'
-            }
-        }
-        stage ("Second step") {
-            steps {
-              sh 'uptime'
+                echo "====== start build image ====="
+                sh 'docker build .'
             }
         }
     }
